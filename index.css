@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("code.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+header{
+    margin: 0;
+    text-align: center;
+    background-color: rgba(49, 47, 47, 0.8);
+    margin-bottom: 80px;
+    margin-top: -10px;
+    padding: 20px;
+    
+    color: white;
+    
+}
+h1 {
+    font-size: 50px;
+    
+}
+p, label {
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+
+}
+ input, select, option, textarea, button{
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    background-color: rgba(137,196,244, 0.2);
+    border: none;
+}
+main{
+    
+    margin: auto;
+    width: 60%;
+    background-color: rgba(255,255,255, 0.95);
+    padding: 40px 0;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    border: 10px solid darkred;
+}
+form{
+    width:90%;
+    margin: auto;
+}
+#other{
+    display:none;
+}
+input, button, textarea, select{
+    
+    margin-bottom: 25px;
+    border-radius: 5px;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+select {
+    color: gray;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-top: 5px;
+    padding-bottom:5px;
+    padding-left:1%
+}
+
+
+span {
+    font-size: 20px;
+}
+input, textarea{
+    padding-left: 1%;
+    width: 99%
+
+    
+}
+select, button{
+    width: 100%
+}
+input[type="radio"] {
+    vertical-align: 5px;
+    margin-bottom: 5px;
+    width: 25px;
+    color: green;
+     
+}
+input[type="checkbox"]{
+    width:25px;
+    vertical-align: 5px;
+    
+}
+#checked{
+    width: 25px;
+}
+
+#other-label {
+    margin-bottom: 5px;
+    flex-basis: 100;
+    padding-top: 10px;
+    
+}
+#other {
+    flex-basis: 100%;
+    overflow: hidden;
+    margin-top: -15px;
+   
+    
+}
+#submit {
+    background-color: green;
+    padding: 10px;
+    color: white;
+}
+#icons {
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+#icons label {
+    flex-basis: 50%;
+}
+i {
+    font-size: 35px;
+}
+textarea{
+    min-height:120px;
+}
+@media screen and (max-width: 768px) {
+    h1{
+      font-size: 30px;
+    } 
+    p, label, input, button, textarea, select {
+        font-size: 20px;
+    }
+    main{
+        width: 90%;
+    }
+}

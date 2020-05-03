@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <link href="index.css" rel="stylesheet" type="text/css" />
+        <title>Survey for Prospective Employers</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Survey for Prospective Employers</h1>
+            <p id="description">Thank you for taking the time to complete this short survey!</p>
+        </header>
+        <main id ="main">
+            <form  id="survey-form">
+                <label id="name-label" for="name">Name</label>
+                
+                <input id = "name"
+                onchange="changeBorder()"
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required/>
+                        
+                <label id ="email-label" for= "email">Email</label>
+                
+                <input id = "email"
+                onchange="changeBorder()"
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required/>
+                        
+                <label id = "number-label"for ="number">Age <span>(optional)</span></label>
+                
+                <input id = "number"
+                        type="number"
+                        name="age"
+                        placeholder="Enter your age"
+                        min=10
+                        max=99
+                        />
+                <p>What kind of organization are you involved in?</p>
+                    <select id="dropdown" onchange="changeBorder()"required>
+                        <option disabled selected value>Select organization type</option>
+                        <option value="software">Software development</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="start-up">Start-up</option>
+                        <option value="other">Other</option>
+                    </select>
+                <p>What kind of software developer are you seeking primarily?</p>
+                    <label>
+                        <input type="radio"
+                                
+                                name="developer"
+                                value="employee"
+                                checked/>Permanent employee
+                    </label>
+                    <br/>
+                    
+                        <input type="radio"
+                                
+                                name="developer"
+                                value="contract"
+                                /><label>Contract / Freelance
+                    </label>
+                    <br/>
+                    <br/>
+                    <p>What specific skills are required?</p>
+                    <div id = "icons">
+                        <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="html"
+                                />HTML <i class="devicon-html5-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="css"
+                                />CSS <i class="devicon-css3-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="sass"
+                                />Sass <i class="devicon-sass-original"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="less"
+                                />Less <i class="devicon-less-plain-wordmark"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="bootstrap"
+                                />Bootstrap <i class="devicon-bootstrap-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="adobe"
+                                />Photoshop <i class="devicon-photoshop-line"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="js"
+                                />Vanilla JS <i class="devicon-javascript-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="jquery"
+                                />jQuery <i class="devicon-jquery-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="react"
+                                />React <i class="devicon-react-original"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="angular"
+                                />Angular <i class="devicon-angularjs-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="vue"
+                                />Vue <i class="devicon-vuejs-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="node"
+                                />Node <i class="devicon-nodejs-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="python"
+                                />Python <i class="devicon-python-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="ruby"
+                                />Ruby on Rails <i class="devicon-ruby-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="typescript"
+                                />Typescript <i class="devicon-typescript-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="php"
+                                />PHP <i class="devicon-php-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="mysql"
+                                />MySQL <i class="devicon-mysql-plain"></i>
+                    </label>
+                    <label>
+                        <input type="checkbox"
+                                name="skills"
+                                value="django"
+                                />Django <i class="devicon-django-plain"></i>
+                    </label>
+                
+                  
+                    <label for = "other" id ="other-label">
+                        <input type="checkbox"
+                                id="checked"
+                                name="skills"
+                                value="other"
+                                onclick="handleChange()"
+                                
+                                 />Other
+                    </label>
+                    <input type="text"
+                                class="other"
+                                id="other"
+                                name="skills"
+                                placeholder="Please specify"
+                                onchange="changeBorder()"
+                                                />
+                
+                    </div>
+                    
+                    <p>Any comments or suggestions?</p>
+                    <textarea id="comments" name="comment" placeholder="Enter your comments here..."></textarea>
+                    <br/>
+                    <button onclick="handlesubmit()" id="submit">Submit</button>
+
+
+
+            </form>
+        </main>
+    </body>
+    <script>
+        function handleChange(){
+        let isChecked = document.getElementById("checked");
+        let other = document.getElementById("other");
+        console.log(document.getElementById("other").style.display)
+        if (isChecked.checked){
+            other.style.display="block";
+            other.setAttribute("required", "")
+            changeBorder();
+        
+        } else if (isChecked.checked===false) {
+            other.value=null;
+            other.style.display="none";
+            other.removeAttribute("required", "");
+            changeBorder();
+
+        }
+        
+        }
+        function handlesubmit(event){
+            event.preventDefault()
+        }
+        function changeBorder(){
+            
+            let form=document.getElementById("survey-form")
+            console.log(form.checkValidity())
+            if (form.checkValidity()){
+
+                document.getElementById("main").style.border="10px solid green";
+            } else if(form.checkValidity()===false){
+                document.getElementById("main").style.borderColor="darkred"
+            }
+        }
+    </script>
+ 
